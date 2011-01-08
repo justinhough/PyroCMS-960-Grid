@@ -1,0 +1,156 @@
+#bannerRotator {
+	-moz-box-shadow: 0px 4px 3px #999;
+	-webkit-box-shadow: 0px 4px 3px #999;
+	box-shadow: 0px 4px 3px #999;
+	width:100%;
+	height:210px;
+	background:#676767;
+}
+#featured {
+	width:950px!important;
+	height:210px!important;
+	background:#000 url(orbit/loading.gif) no-repeat center center;
+	overflow:hidden;
+}
+/* CONTAINER */
+div.orbit {
+	width:1px;
+	height:1px;
+	position:relative;
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.25);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.25);
+	overflow:hidden;
+}
+div.orbit img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+div.orbit a img {
+	border:none;
+}
+/* TIMER */
+div.timer {
+	width:40px;
+	height:40px;
+	overflow:hidden;
+	position:absolute;
+	top:10px;
+	right:10px;
+	opacity:.6;
+	cursor:pointer;
+	z-index:1001;
+	color:#FFF;
+}
+span.rotator {
+	display:block;
+	width:40px;
+	height:40px;
+	position:absolute;
+	top:0;
+	left:-20px;
+	background:url(orbit/rotator-black.png) no-repeat;
+	z-index:3;
+}
+span.mask {
+	display:block;
+	width:20px;
+	height:40px;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:2;
+	overflow:hidden;
+}
+span.rotator.move {
+	left:0;
+}
+span.mask.move {
+	width:40px;
+	left:0;
+	background:url(orbit/timer-black.png) repeat 0 0;
+}
+span.pause {
+	display:block;
+	width:40px;
+	height:40px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(orbit/pause-black.png) no-repeat;
+	z-index:4;
+	opacity:0;
+}
+div.timer:hover span.pause, span.pause.active, div.timer:hover span.pause.active {
+	opacity:1;
+}
+/* CAPTIONS */
+div.caption {
+	background:#000;
+	background:rgba(0,0,0,.6);
+	width:100%;
+	z-index:1000;
+	position:absolute;
+	bottom:-100px;
+	color:#fff;
+	padding:8px 0;
+}
+div.caption span {
+	padding:0 10px;
+	font-size:14px;
+	text-shadow:0 1px 0 rgba(0,0,0,.8);
+	margin:0;
+}
+.orbit-caption {
+	display:none;
+}
+/* DIRECTIONAL NAV */
+div.orbit:hover div.slider-nav {
+	display:block;
+}
+div.slider-nav {
+	display:none;
+}
+div.slider-nav span {
+	width:33px;
+	height:33px;
+	text-indent:-9999px;
+	position:absolute;
+	z-index:1000;
+	top:47%;
+	cursor:pointer;
+}
+div.slider-nav span.right {
+	background:url(orbit/right-arrow.png);
+	right:10px;
+}
+div.slider-nav span.left {
+	background:url(orbit/left-arrow.png);
+	left:10px;
+}
+/* BULLET NAV */
+.orbit-bullets {
+	position:absolute;
+	z-index:1000;
+	list-style:none;
+	/* top: 10px; left: 7px; */
+	bottom:5px;
+	right:15px;
+	margin:0;
+	padding:0;
+}
+.orbit-bullets li {
+	float:left;
+	margin-left:5px;
+	cursor:pointer;
+	color:#999;
+	text-indent:-9999px;
+	background:url(orbit/bullets.png) no-repeat;
+	width:7px;
+	height:7px;
+	overflow:hidden;
+}
+.orbit-bullets li.active {
+	color:#222;
+	background-position:-7px 0;
+}

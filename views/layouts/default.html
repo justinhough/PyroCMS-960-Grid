@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head>
+	{pyro:theme:partial name="metadata"}
+</head>
+<body id="subPage">
+
+<div class="container_16"> 
+  <!-- Begin pageWrapper --> 
+  {pyro:integration:analytics} 
+  <!-- Begin header -->
+  <div id="header" class="grid_16"> 
+  	{pyro:theme:partial name="header"}
+	<ul id="navbar">
+      {pyro:navigation:links group="header"}
+    </ul>
+  </div>
+  <div id="bannerImage" class="grid_16">
+  	<h2>{pyro:page:title}</h2>
+  </div>
+  <!-- End header --> 
+ 
+  
+  <!-- Begin Content -->
+  <div id="contentWrapper" class="grid_16"> 
+    <!-- SIDEBAR-->
+    <div class="grid_4">
+    	<div id="sidebarSub" class="equal">
+    		{pyro:widgets:instance id="_____"}
+    		<p>&nbsp;</p>
+			{pyro:widgets:instance id="_____"}
+				   		
+   		</div>
+   </div>
+    
+    <!-- MAIN CONTENT -->
+    <div class="grid_12"> 
+    	<div id="subContent" class="equal">
+	    	{pyro:session:messages success="success-box" notice="notice-box" error="error-box"}
+	      	{pyro:theme:partial name="breadcrumbs"}
+	      
+	      	{pyro:template:body}
+      	</div>
+    </div>
+    
+  </div>
+  <!-- End Content --> 
+</div>
+
+<!-- FOOTER --> 
+{pyro:theme:partial name="footer"} 
+
+</body>
+</html>
